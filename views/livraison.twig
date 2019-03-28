@@ -1,0 +1,79 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+        <title>Livraison</title>
+        <!--  meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+          <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+        <!-- <script src="js2/script.js"></script> -->
+        <link rel="stylesheet" href="Do_css/commande.css">
+        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+               <div id="navbar">
+                  <a id="logo">Recette Fitness</a>
+                  <a href="index">Accueil</a>
+                  <div id="navbar-right">
+                    <a href="deconnection">Déconnection</a>
+                  </div>
+              </div>
+
+                    
+
+        <div class="container">
+                <div align="center">
+                        <h3><strong>Bienvenue </strong></h3>
+                        <p>Nous allons vous demander les informations nécessaires à livrer la commande</p>
+                </div>
+                <form  method="post" action="/livraison" role="form">
+                    <div class="form-group">
+                        <label for="nom">Nom de la personne à contacter pour la livraison:</label><br>
+                        <input type="text" name="nom" class="form-control" id="nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prenom">Prénom de la personne à contacter pour la livraison:</label><br>
+                        <input type="text" name="prenom" class="form-control" id="prenom">
+                    </div>
+
+                   <div class="form-group">
+                        <label for="telephone">Téléphone de la personne à contacter pour la livraison:</label><br>
+                        <input type="tel" name="telephone" class="form-control" id="telephone">
+                   </div>
+
+                   <div class="form-group">
+                       <label for="telephone2">Deuxième Téléphone de la personne à contacter pour la livraison:</label> <br>
+                       <input type="tel" name="telephone2" class="form-control" id="telephone2">
+                   </div>
+                   <div class="nb" align="center">
+                    <p><strong>Livraison Standard </strong><br><center>1000F</center></p>
+                    </div>
+                    <div class="last-boutton">
+                         <button type="submit" class="btn btn-info">Valider</button>
+                    </div>
+                </form>
+
+                     {% if flash and flash.error %}
+                      <div class="alert alert-danger col-lg-4 col-lg-offset-4">
+                          {{ flash.error }}
+                      </div>
+                    {% endif %} 
+
+                    {% if flash and flash.succes %}
+                        <div class="alert alert-success col-lg-4 col-lg-offset-4">
+                                {{ flash.succes }}
+                        </div>
+                    {% endif %} 
+                
+                
+        </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    	<head>
+    		  <title>Contatez-moi !</title>
+    		    <!--  meta tags -->
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+                <!-- Bootstrap CSS -->
+              <link rel="stylesheet" href="css/bootstrap.min.css">
+              <script type="text/javascript" src="js/jquery.min.js"></script>
+              <script type="text/javascript" src="js/bootstrap.min.js"></script>
+              
+
+              <!-- <script src="js2/script.js"></script> -->
+              <link rel="stylesheet" href="Do_css/connexion.css">
+              <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    	</head>
+      <body>
+
+              
+            
+
+            <div class="container">            
+              <h2 align="center">Se connecter</h2>
+                <div class="row">
+                    {% if flash and flash.error %}
+                      <div class="alert alert-danger col-lg-4 col-lg-offset-4">
+                          {{ flash.error }}
+                      </div>
+                    {% endif %} 
+                    {% if flash and flash.error2 %}
+                    <div class="alert alert-danger col-lg-4 col-lg-offset-4">
+                        {{ flash.error2 }}
+                    </div>
+                  {% endif %} 
+                  <div class="col-lg-4 col-lg-offset-4">
+                    <form id="contact-form" method="post" action="/connexion" role="form" style="margin-top: 80px;">    
+                          <div class="row">                             
+                            <div class="heading">
+                              <h3>Identifier-vous pour continuer</h3>
+                            </div>
+                            <div class="divider"></div>
+                            <p><small>Nouveau sur Recette fitness?<br> <a href="inscription">inscrivez-vous</a></small></p>
+                            <div class="col-md-12">
+                              <label for="Email">Email</label>
+                              <input  type="email" class="form-control" name="email" id="email" placeholder="Entrer votre email"><br>
+                            </div>
+
+                            <div class="col-md-12">
+                              <label for="code">Mot de passe</label>
+                              <input  type="password" class="form-control" name="code" id="code" placeholder="Code Secret"><br>
+                            </div>
+
+                            <div class="col-md-12">
+                              <input type="submit" class="button1" value="Envoyer">
+                            </div>
+
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+      </body>
+
+</html>

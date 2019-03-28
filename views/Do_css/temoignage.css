@@ -1,0 +1,28 @@
+.champ textarea{
+    font-size: 50px
+}
+
+.container{
+    margin-top: 7em;
+}
+
+.comments{
+    margin-left: 60px;
+}
+
+.comments h3{
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: gray;
+    font-size: 18px;
+}
+
+.navbar ul a:hover{
+    color: #fff;
+}

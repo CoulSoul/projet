@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <title>création de compte !</title>
+		    <!--  meta tags -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <script type="text/javascript" src="js/jquery.min.js"></script>
+          <script type="text/javascript" src="js/bootstrap.min.js"></script>
+          
+          <!-- <script src="js2/script.js"></script> -->
+          <link rel="stylesheet" href="Do_css/connexion.css">
+          <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+
+			
+	  
+		<div class="container">
+			<div class="heading">
+				<h2>Créer un compte</h2>
+				<p>Vous avez déja un compte? <a href="connexion">Sidentifier</a></p>
+			</div>
+						{% if flash and flash.error %}
+						      <div class="alert alert-danger col-lg-4 col-lg-offset-4">
+						          {{ flash.error }}
+						      </div>
+						{% endif %} 
+						{% if flash and flash.succes %}
+								<div class="alert alert-success col-lg-4 col-lg-offset-4">
+										{{ flash.succes }}
+								</div>
+						{% endif %} 
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<form id="contact-form" method="post" action="/inscription" role="form">
+						<div class="row">
+							<div class="col-md-6">
+								<label for="firstname">Prénom<span > </span></label>
+								<input  type="test" name="prenom" class="form-control" placeholder="Votre prénom" id="firstname">
+								<p class="comment"></p>
+							</div>
+
+							<div class="col-md-6">
+								<label for="name">Nom<span > </span></label>
+								<input   type="text" name="nom" class="form-control" placeholder="Votre Nom" id="name">
+								<p class="comment"></p>
+							</div>
+
+
+							<div class="col-md-12">
+								<label for="phone">Téléphone</label>
+								<input  type="text" name="phone" class="form-control" placeholder="Votre Téléphone" id="phone">
+								<p class="comment"></p>
+							</div>
+
+							<div class="col-md-12">
+								<label for="Email">Email</label>
+								<input  type="email" class="form-control" name="email" id="email" placeholder="Entrer votre email"><br>
+							</div>
+
+							<div class="col-md-12">
+								<label for="code">Mot de passe</label>
+								<input  type="password" class="form-control" name="code" id="code" placeholder="Code Secret"><br>
+							</div>
+
+							<div class="col-md-12">
+								<input type="submit" class="button1" value="Envoyer">
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>	
+
+		
+	  
+	</body>
+</html>

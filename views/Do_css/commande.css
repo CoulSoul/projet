@@ -1,0 +1,55 @@
+
+body{
+    background: #eee;
+}
+
+.container.admin{
+	margin-top: 80px;
+	background: #fff;
+	padding: 40px;
+	border-radius: 10px;
+}
+
+#navbar{
+    background: black;
+    padding: 60px 10px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar a{
+    float: left;
+    padding: 12px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    color: #eee;
+}
+
+#navbar #logo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#navbar-right{
+    float: right;
+}
+
+.nb{
+    border: 2px solid red;
+}
+
+.last-boutton{
+    text-align: center;
+}
+ .btn{
+    margin-top: 10px;
+ }
